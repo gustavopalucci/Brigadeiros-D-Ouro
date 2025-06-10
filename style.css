@@ -1,21 +1,23 @@
+/* === CONFIGURAÇÕES GERAIS === */
 body {
   font-family: Arial, sans-serif;
   background-color: #ffdd98;
-  color: #cb9c00;
+  color: #efd47e;
   margin: 0;
   padding: 0;
 }
 
+/* === CABEÇALHO === */
 header {
-  background-color: #b99700;
-  color: white;
+  background-color: #c9a017;
+  color: rgb(255, 255, 255);
   text-align: center;
-  padding: 20px 10px;
+  padding: 20px;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .social-links {
@@ -26,15 +28,35 @@ header h1 {
   color: rgb(255, 255, 255);
   margin: 0 10px;
   text-decoration: none;
+  font-weight: bold;
 }
 
-main {
-  padding: 20px;
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* === CHAMADA PRINCIPAL === */
+.call-to-action {
+  text-align: center;
+  padding: 30px;
+  background-color: #bf9869;
+}
+
+.apresentacao-links-conteudo {
+  font-size: 2em;
+  font-weight: bold;
+  color: #a27f02;
+}
+
+/* === CATÁLOGO DE SABORES === */
+.catalogo {
+  padding: 30px;
+  text-align: center;
 }
 
 .catalogo h2 {
-  text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.8em;
+  color: #ac9034;
   margin-bottom: 20px;
 }
 
@@ -43,10 +65,12 @@ main {
   padding: 0;
   max-width: 500px;
   margin: 0 auto;
+  font-size: 1.2em;
+  color: #444;
 }
 
 .sabores li {
-  background-color: #fefefd;
+  background-color: #dbdbac;
   border: 1px solid #d4a265;
   border-radius: 5px;
   padding: 10px;
@@ -54,9 +78,100 @@ main {
   text-align: center;
 }
 
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #f7ec87;
-  font-size: 0.9rem;
+/* === DETALHES DOS SABORES === */
+.sabor {
+  margin-bottom: 15px;
 }
+
+.titulo {
+  background-color: #d4af37;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.descricao {
+  margin-top: 10px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* === SEÇÃO DE VALORES === */
+.valores {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff8e7;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.valores h2 {
+  font-size: 2.5em;
+  color: #d4af37;
+  margin-bottom: 30px;
+}
+
+.produto {
+  background-color: #fff;
+  border: 2px solid #d4af37;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.produto .nome {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #a27f02;
+}
+
+.produto .preco {
+  font-size: 1.2em;
+  color: #555;
+  margin: 5px 0;
+}
+
+.produto .quantidade {
+  font-style: italic;
+  color: #777;
+}
+
+/* === BOTÃO DE VOLTAR === */
+.valores-link,
+.botao-voltar {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.botao-voltar {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #d4af37;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-voltar:hover {
+  background-color: #b38e2e;
+}
+
+/* === RODAPÉ === */
+footer {
+  background-color: #d4af37;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
