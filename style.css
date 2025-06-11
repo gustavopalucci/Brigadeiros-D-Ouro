@@ -236,7 +236,7 @@ footer {
   font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
-  padding: 8px 15px;
+  padding: 8px 12px;
   border-radius: 50px;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -247,7 +247,7 @@ footer {
 
 /* WhatsApp */
 .social-icon.whatsapp {
-  background-color: #88cda1; /* Cor padrão do WhatsApp */
+  background-color: #49cd32; /* Cor padrão do WhatsApp */
   color: rgb(255, 255, 255);
 }
 
@@ -258,7 +258,7 @@ footer {
 
 /* Instagram */
 .social-icon.instagram {
-  background-color: #d487a1; /* Cor padrão do Instagram */
+  background-color: #d44b79; /* Cor padrão do Instagram */
   color: white;
 }
 
