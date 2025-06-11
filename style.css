@@ -10,7 +10,7 @@ body {
 /* === CABEÇALHO === */
 header {
   background-color: #c9a017;
-  color: rgb(255, 255, 255);
+  color: #fff;
   text-align: center;
   padding: 20px;
 }
@@ -25,7 +25,7 @@ header h1 {
 }
 
 .social-links a {
-  color: rgb(255, 255, 255);
+  color: #fff;
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
@@ -35,20 +35,7 @@ header h1 {
   text-decoration: underline;
 }
 
-/* === CHAMADA PRINCIPAL === */
-.call-to-action {
-  text-align: center;
-  padding: 30px;
-  background-color: #bf9869;
-}
-
-.apresentacao-links-conteudo {
-  font-size: 2em;
-  font-weight: bold;
-  color: #a27f02;
-}
-
-/* === CATÁLOGO DE SABORES === */
+/* === SEÇÃO CATÁLOGO DE SABORES === */
 .catalogo {
   padding: 30px;
   text-align: center;
@@ -66,37 +53,58 @@ header h1 {
   max-width: 500px;
   margin: 0 auto;
   font-size: 1.2em;
-  color: #444;
+  color: #897201;
 }
 
 .sabores li {
-  background-color: #dbdbac;
-  border: 1px solid #d4a265;
+  background: #ffffff;
+  border: 1px solid #ac9200;
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
   text-align: center;
 }
 
-/* === DETALHES DOS SABORES === */
-.sabor {
-  margin-bottom: 15px;
+/* === DETALHES DOS SABORES COM <details> === */
+details.sabor {
+  border: 1px solid #d9aa0e;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  padding: 5px;
 }
 
-.titulo {
-  background-color: #d4af37;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-size: 1em;
+summary.titulo {
+  color: #897201;
   cursor: pointer;
+  padding: 15px;
+  font-weight: bold;
+  list-style: none;
+}
+
+summary.titulo::-webkit-details-marker {
+  display: none;
+}
+
+summary.titulo::after {
+  content: "▸";
+  float: right;
+  transition: transform 0.2s;
+}
+
+details[open] summary.titulo::after {
+  transform: rotate(90deg);
+}
+
+details[open] {
+  background: #fffaf0;
 }
 
 .descricao {
-  margin-top: 10px;
-  font-size: 0.95em;
+  padding: 0 12px 12px;
+  margin: 0;
   color: #555;
+  font-size: 0.95em;
 }
 
 /* === SEÇÃO DE VALORES === */
@@ -105,9 +113,9 @@ header h1 {
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
-  background-color: #fff8e7;
+  background-color: #fffefd;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(157, 255, 0, 0.1);
 }
 
 .valores h2 {
@@ -117,7 +125,7 @@ header h1 {
 }
 
 .produto {
-  background-color: #fff;
+  background-color: #fffcfc;
   border: 2px solid #d4af37;
   padding: 20px;
   margin: 20px auto;
@@ -134,7 +142,7 @@ header h1 {
 
 .produto .preco {
   font-size: 1.2em;
-  color: #555;
+  color: #ffffff;
   margin: 5px 0;
 }
 
@@ -144,8 +152,7 @@ header h1 {
 }
 
 /* === BOTÃO DE VOLTAR === */
-.valores-link,
-.botao-voltar {
+.valores-link {
   text-align: center;
   margin-top: 40px;
 }
@@ -153,8 +160,8 @@ header h1 {
 .botao-voltar {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #d4af37;
-  color: white;
+  background: #d4af37;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
@@ -162,16 +169,62 @@ header h1 {
 }
 
 .botao-voltar:hover {
-  background-color: #b38e2e;
+  background: #b38e2e;
 }
 
 /* === RODAPÉ === */
 footer {
   background-color: #d4af37;
-  color: white;
+  color: rgb(97, 97, 97);
   text-align: center;
   padding: 15px 0;
   font-size: 0.9rem;
   margin-top: 30px;
 }
 
+/* === ABAS (TABS) COM RADIO BUTTON === */
+.tabs {
+  margin-top: 10px;
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tabs label {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-right: 4px;
+  background: #ffffb4;
+  color: #897201;
+  cursor: pointer;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  user-select: none;
+}
+
+.tabs input:checked + label {
+  background: #d4af37;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.tab-content {
+  border: 1px solid #d4af37;
+  border-top: none;
+  padding: 15px;
+  display: none;
+  color: #555;
+  font-size: 0.95em;
+}
+
+#trad-desc:checked ~ .trad-desc,
+#trad-feito:checked ~ .trad-feito,
+#bicho-desc:checked ~ .bicho-desc,
+#bicho-feito:checked ~ .bicho-feito,
+#ninho-desc:checked ~ .ninho-desc,
+#ninho-feito:checked ~ .ninho-feito,
+#beijinho-desc:checked ~ .beijinho-desc,
+#beijinho-feito:checked ~ .beijinho-feito {
+  display: block;
+}
