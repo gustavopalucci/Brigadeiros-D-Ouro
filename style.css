@@ -2,14 +2,14 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #fff8dc;
-  color: #f3dc93;
+  color: #f0ce5e;
   margin: 0;
   padding: 0;
 }
 
 /* === CABEÇALHO === */
 header {
-  background-color: #f8d76d;
+  background-color: #d3b84e;
   color: #866300;
   text-align: center;
   padding: 20px;
