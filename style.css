@@ -6,14 +6,16 @@ body {
   margin: 0;
   padding: 0;
 }
-
 /* === CABEÇALHO === */
+
 header {
-  background-color: #d3b84e;
+  background-color: #D4AF37; /* Substitua pelo código desejado */
   color: #866300;
   text-align: center;
   padding: 20px;
 }
+
+
 
 header h1 {
   margin: 0;
